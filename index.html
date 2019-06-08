@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>A Multiplayer Game</title>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        #pixi-canvas-container {
+            z-index: -1;
+        }
+
+        #fpsCont {
+            color: white;
+        }
+
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div (window:resize)="adjustCanvasSize()" id="pixi-canvas-container"></div> <!-- main Pixi.js canvas -->
+    <div id="fpsCont">fps: <span id="fps"></span></div>
+
+    <script src="/raycast/inc/lib/pixi.min.js"></script>
+    
+    <script src="/raycast/inc/func.js"></script>
+    <script src="/raycast/main.js"></script>
+</body>
+
+</html>
